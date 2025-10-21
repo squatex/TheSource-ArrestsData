@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Misdemeanor Homeless Arrests in Indian River County</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: system-ui, -apple-system, sans-serif; }
+        #header {
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        h1 { font-size: 26px; font-weight: 600; margin-bottom: 12px; }
+        #stats {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        #stats > div { font-size: 16px; font-weight: 500; }
+        #stats strong { margin-right: 8px; font-size: 18px; }
+        #filter-section {
+            margin-left: auto;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .filter-group label {
+            font-weight: 500;
+            font-size: 12px;
+        }
+        #charge-filter, #month-filter, #agency-filter {
+            padding: 6px 12px;
+            border-radius: 4px;
+            border: none;
+            font-size: 13px;
+            cursor: pointer;
+            min-width: 200px;
+            max-height: 120px;
+            background: white;
+        }
+        .clear-btn {
+            padding: 6px 12px;
+            border-radius: 4px;
+            border: none;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            font-size: 12px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+        .clear-btn:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        #animation-controls {
+            padding: 15px 20px;
+            background: #e9ecef;
+            border-bottom: 1px solid #dee2e6;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        #play-btn {
+            padding: 10px 20px;
+            border-radius: 6px;
+            border: none;
+            background: #28a745;
+            color: white;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        #play-btn:hover {
+            background: #218838;
+        }
+        #play-btn:disabled {
+            background: #6c757d;
+            cursor: not-allowed;
+        }
+        #current-month-display {
+            font-size: 20px;
+            font-weight: 700;
+            color: #495057;
+            padding: 8px 16px;
+            background: white;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        #legend {
+            padding: 12px 20px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #dee2e6;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .legend-dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        #map {
+            height: calc(100vh - 280px);
+            width: 100%;
+        }
+        .popup-content {
+            min-width: 250px;
+            max-width: 350px;
+        }
+        .arrest-item {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            line-height: 1.6;
+        }
+        .source-member-badge {
+            background: #ffc107;
+            color: #000;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+        .jail-time-badge {
+            background: #dc3545;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>Misdemeanor Homeless Arrests in Indian River County (2025)</h1>
+        <div id="stats">
+            <div><strong>Total Arrests:</strong> <span id="total-count">0</span></div>
+            <div><strong>Source Members:</strong> <span id="member-count">0</span></div>
+            <div><strong>Unique Locations:</strong> <span id="location-count">0</span></div>
+            <div><strong>Total Jail Days:</strong> <span id="total-jail-days">0</span></div>
+            <div><strong>Avg Days/Arrest:</strong> <span id="avg-jail-days">0</span></div>
+            <div><strong>Incarceration Cost:</strong> <span id="total-cost">$0</span> <span style="font-size: 12px; color: rgba(255,255,255,0.8);">(@$115/day)</span></div>
+            <div id="filter-section">
+                <div class="filter-group">
+                    <label>Filter by Charge:</label>
+                    <select id="charge-filter" multiple size="4">
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Filter by Agency:</label>
+                    <select id="agency-filter" multiple size="4">
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Filter by Month:</label>
+                    <select id="month-filter" multiple size="4">
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Source Member:</label>
+                    <select id="member-filter" multiple size="2">
+                        <option value="true">Source Members</option>
+                        <option value="false">Non-Members</option>
+                    </select>
+                </div>
+                <button class="clear-btn" onclick="clearFilters()">Clear Filters</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="animation-controls">
+        <button id="play-btn" onclick="toggleAnimation()">
+            <span id="play-icon">▶</span>
+            <span id="play-text">Play Timeline</span>
+        </button>
+        <div id="current-month-display">Select month or press Play</div>
+    </div>
+
+    <div id="legend">
+        <strong>Legend:</strong>
+        <div class="legend-item">
+            <span class="legend-dot" style="background: #e74c3c;"></span>
+            Trespass
+        </div>
+        <div class="legend-item">
+            <span class="legend-dot" style="background: #f39c12;"></span>
+            MISD FTA
+        </div>
+        <div class="legend-item">
+            <span class="legend-dot" style="background: #3498db;"></span>
+            DL - No Valid
+        </div>
+        <div class="legend-item">
+            <span class="legend-dot" style="background: #9b59b6;"></span>
+            Civil/Non-Criminal
+        </div>
+        <div class="legend-item" style="margin-left: 10px; border-left: 2px solid #ddd; padding-left: 20px;">
+            <span style="font-size: 24px;">&#127968;</span>
+            <strong style="color: #FF0000;">The Source (1015 Commerce Ave)</strong>
+        </div>
+        <span style="margin-left: 20px; font-style: italic; color: #666;">
+            * Circle size = number of arrests at location
+        </span>
+    </div>
+
+    <div id="map"></div>
+
+    <script>
+        let geocodedData = [];
+        let map;
+        let markers = [];
+        let animationInterval = null;
+        let isPlaying = false;
+        let sortedMonthsList = [];
+
+        function getDataSource() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('data') || urlParams.get('dataUrl');
+        }
+
+        async function loadData() {
+            const dataSource = getDataSource();
+            
+            if (!dataSource) {
+                alert('Please specify a data source using ?data=arrests-data-with-daysin-json.json');
+                return false;
+            }
+
+            try {
+                if (window.fs && window.fs.readFile) {
+                    try {
+                        const fileContent = await window.fs.readFile(dataSource, { encoding: 'utf8' });
+                        geocodedData = JSON.parse(fileContent);
+                        console.log('Loaded ' + geocodedData.length + ' records from ' + dataSource);
+                        updateStatistics();
+                        return true;
+                    } catch (fsError) {
+                        console.log('window.fs.readFile not available or failed, trying fetch...');
+                    }
+                }
+                
+                const response = await fetch(dataSource);
+                if (!response.ok) {
+                    throw new Error('Failed to load data: ' + response.status + ' ' + response.statusText);
+                }
+                geocodedData = await response.json();
+                console.log('Loaded ' + geocodedData.length + ' records from ' + dataSource);
+                updateStatistics();
+                return true;
+            } catch (error) {
+                console.error('Error loading data:', error);
+                alert('Error loading data from ' + dataSource + ': ' + error.message);
+                return false;
+            }
+        }
+
+        function updateStatistics(filteredData) {
+            const data = filteredData || geocodedData;
+            const totalJailDays = data.reduce(function(sum, arrest) { 
+                return sum + (arrest.daysin || 0); 
+            }, 0);
+            const avgJailDays = data.length > 0 ? (totalJailDays / data.length).toFixed(1) : 0;
+            const totalCost = totalJailDays * 115;
+            
+            const memberCount = data.filter(function(arrest) {
+                return arrest.member === 'true';
+            }).length;
+            
+            document.getElementById('total-count').textContent = data.length;
+            document.getElementById('member-count').textContent = memberCount;
+            document.getElementById('total-jail-days').textContent = totalJailDays;
+            document.getElementById('avg-jail-days').textContent = avgJailDays;
+            document.getElementById('total-cost').textContent = '$' + totalCost.toLocaleString();
+            
+            const uniqueLocations = new Set(data.map(function(d) { 
+                return d.lat + ',' + d.lon; 
+            }));
+            document.getElementById('location-count').textContent = uniqueLocations.size;
+        }
+
+        function getChargeColor(charge) {
+            if (charge.includes('Trespass')) return '#e74c3c';
+            if (charge.includes('MISD FTA')) return '#f39c12';
+            if (charge.includes('DL -')) return '#3498db';
+            if (charge.includes('COC Civil') || charge.includes('Non-Criminal') || charge.includes('PROWLING')) return '#9b59b6';
+            return '#95a5a6';
+        }
+
+        function initMap() {
+            map = L.map('map').setView([27.6386, -80.3976], 12);
+            
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; OpenStreetMap contributors',
+                maxZoom: 19
+            }).addTo(map);
+
+            populateFilters();
+            
+            const sourceMarker = L.marker([27.620426431920663, -80.38977101274233], {
+                icon: L.divIcon({
+                    className: 'source-marker',
+                    html: '<div style="position: relative; width: 45px; height: 45px; background: #FF0000; border-radius: 50% 50% 50% 0; transform: rotate(-45deg); border: 3px solid white; box-shadow: 0 3px 10px rgba(0,0,0,0.4);"><div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(45deg); font-size: 22px;">&#127968;</div></div>',
+                    iconSize: [45, 45],
+                    iconAnchor: [22.5, 45],
+                    popupAnchor: [0, -45]
+                })
+            }).addTo(map);
+
+            sourceMarker.bindPopup('<div class="popup-content"><strong style="font-size: 18px; color: #FF0000;">&#127968; The Source</strong><br/><div style="margin-top: 8px; font-size: 13px;"><strong>Address:</strong> 1015 Commerce Ave, Vero Beach, FL<br/><strong>Purpose:</strong> Homeless services and support center</div></div>');
+            
+            updateMarkers();
+        }
+
+        function populateFilters() {
+            const charges = {};
+            const months = {};
+            const agencies = {};
+            
+            geocodedData.forEach(function(row) {
+                charges[row.charge] = (charges[row.charge] || 0) + 1;
+                
+                const date = new Date(row.date);
+                const monthYear = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long' });
+                months[monthYear] = (months[monthYear] || 0) + 1;
+                
+                const agency = row.arresting_agency || 'Unknown';
+                agencies[agency] = (agencies[agency] || 0) + 1;
+            });
+
+            const chargeFilter = document.getElementById('charge-filter');
+            chargeFilter.innerHTML = '';
+            Object.entries(charges).forEach(function(entry) {
+                const charge = entry[0];
+                const count = entry[1];
+                const option = document.createElement('option');
+                option.value = charge;
+                option.textContent = charge + ' (' + count + ')';
+                chargeFilter.appendChild(option);
+            });
+
+            const agencyFilter = document.getElementById('agency-filter');
+            agencyFilter.innerHTML = '';
+            Object.entries(agencies).sort(function(a, b) {
+                return b[1] - a[1];
+            }).forEach(function(entry) {
+                const agency = entry[0];
+                const count = entry[1];
+                const option = document.createElement('option');
+                option.value = agency;
+                option.textContent = agency + ' (' + count + ')';
+                agencyFilter.appendChild(option);
+            });
+
+            const monthFilter = document.getElementById('month-filter');
+            monthFilter.innerHTML = '';
+            sortedMonthsList = Object.entries(months).sort(function(a, b) {
+                return new Date(a[0]) - new Date(b[0]);
+            });
+            
+            sortedMonthsList.forEach(function(entry) {
+                const month = entry[0];
+                const count = entry[1];
+                const option = document.createElement('option');
+                option.value = month;
+                option.textContent = month + ' (' + count + ')';
+                monthFilter.appendChild(option);
+            });
+        }
+
+        function getSelectedValues(selectElement) {
+            const selected = [];
+            const options = selectElement.options;
+            for (let i = 0; i < options.length; i++) {
+                if (options[i].selected) {
+                    selected.push(options[i].value);
+                }
+            }
+            return selected;
+        }
+
+        function clearFilters() {
+            const chargeFilter = document.getElementById('charge-filter');
+            const monthFilter = document.getElementById('month-filter');
+            const memberFilter = document.getElementById('member-filter');
+            const agencyFilter = document.getElementById('agency-filter');
+            
+            for (let i = 0; i < chargeFilter.options.length; i++) {
+                chargeFilter.options[i].selected = false;
+            }
+            for (let i = 0; i < monthFilter.options.length; i++) {
+                monthFilter.options[i].selected = false;
+            }
+            for (let i = 0; i < memberFilter.options.length; i++) {
+                memberFilter.options[i].selected = false;
+            }
+            for (let i = 0; i < agencyFilter.options.length; i++) {
+                agencyFilter.options[i].selected = false;
+            }
+            
+            document.getElementById('current-month-display').textContent = 'Select month or press Play';
+            updateMarkers();
+        }
+
+        function selectMonth(monthValue, cumulative) {
+            const monthFilter = document.getElementById('month-filter');
+            
+            if (!cumulative) {
+                for (let i = 0; i < monthFilter.options.length; i++) {
+                    monthFilter.options[i].selected = false;
+                }
+            }
+            
+            for (let i = 0; i < monthFilter.options.length; i++) {
+                if (monthFilter.options[i].value === monthValue) {
+                    monthFilter.options[i].selected = true;
+                    break;
+                }
+            }
+            
+            document.getElementById('current-month-display').textContent = monthValue;
+            updateMarkers();
+        }
+
+        function toggleAnimation() {
+            if (isPlaying) {
+                stopAnimation();
+            } else {
+                startAnimation();
+            }
+        }
+
+        function startAnimation() {
+            if (sortedMonthsList.length === 0) return;
+            
+            isPlaying = true;
+            document.getElementById('play-btn').style.background = '#dc3545';
+            document.getElementById('play-icon').textContent = '⏸';
+            document.getElementById('play-text').textContent = 'Pause Timeline';
+            
+            const monthFilter = document.getElementById('month-filter');
+            for (let i = 0; i < monthFilter.options.length; i++) {
+                monthFilter.options[i].selected = false;
+            }
+            
+            let currentIndex = 0;
+            
+            selectMonth(sortedMonthsList[currentIndex][0], true);
+            
+            animationInterval = setInterval(function() {
+                currentIndex++;
+                
+                if (currentIndex >= sortedMonthsList.length) {
+                    stopAnimation();
+                    return;
+                }
+                
+                selectMonth(sortedMonthsList[currentIndex][0], true);
+            }, 2000);
+        }
+
+        function stopAnimation() {
+            isPlaying = false;
+            if (animationInterval) {
+                clearInterval(animationInterval);
+                animationInterval = null;
+            }
+            
+            document.getElementById('play-btn').style.background = '#28a745';
+            document.getElementById('play-icon').textContent = '▶';
+            document.getElementById('play-text').textContent = 'Play Timeline';
+        }
+
+        function updateMarkers() {
+            markers.forEach(function(marker) {
+                map.removeLayer(marker);
+            });
+            markers = [];
+
+            const selectedCharges = getSelectedValues(document.getElementById('charge-filter'));
+            const selectedMonths = getSelectedValues(document.getElementById('month-filter'));
+            const selectedMembers = getSelectedValues(document.getElementById('member-filter'));
+            const selectedAgencies = getSelectedValues(document.getElementById('agency-filter'));
+            
+            let filteredData = geocodedData;
+            
+            if (selectedCharges.length > 0) {
+                filteredData = filteredData.filter(function(row) {
+                    return selectedCharges.indexOf(row.charge) !== -1;
+                });
+            }
+            
+            if (selectedMonths.length > 0) {
+                filteredData = filteredData.filter(function(row) {
+                    const date = new Date(row.date);
+                    const monthYear = date.toLocaleDateString('en-US', { year: 'numeric', month: 'long' });
+                    return selectedMonths.indexOf(monthYear) !== -1;
+                });
+            }
+
+            if (selectedMembers.length > 0) {
+                filteredData = filteredData.filter(function(row) {
+                    return selectedMembers.indexOf(row.member) !== -1;
+                });
+            }
+
+            if (selectedAgencies.length > 0) {
+                filteredData = filteredData.filter(function(row) {
+                    const agency = row.arresting_agency || 'Unknown';
+                    console.log('Checking agency:', agency, 'against selected:', selectedAgencies);
+                    return selectedAgencies.indexOf(agency) !== -1;
+                });
+            }
+            
+            console.log('Filtered data count:', filteredData.length, 'Selected agencies:', selectedAgencies);
+
+            updateStatistics(filteredData);
+
+            const locationGroups = {};
+            filteredData.forEach(function(point) {
+                const key = parseFloat(point.lat).toFixed(5) + ',' + parseFloat(point.lon).toFixed(5);
+                if (!locationGroups[key]) locationGroups[key] = [];
+                locationGroups[key].push(point);
+            });
+
+            Object.values(locationGroups).forEach(function(group) {
+                const point = group[0];
+                const count = group.length;
+                const lat = parseFloat(point.lat);
+                const lng = parseFloat(point.lon);
+                
+                const marker = L.circleMarker([lat, lng], {
+                    radius: Math.min(8 + count * 2, 25),
+                    fillColor: getChargeColor(point.charge),
+                    color: '#fff',
+                    weight: 2,
+                    opacity: 1,
+                    fillOpacity: 0.7
+                }).addTo(map);
+
+                const totalJailDays = group.reduce(function(sum, arrest) {
+                    return sum + (arrest.daysin || 0);
+                }, 0);
+                const avgJailDays = (totalJailDays / count).toFixed(1);
+                const locationCost = totalJailDays * 115;
+
+                let popupContent = '<div class="popup-content"><strong style="font-size: 14px;">' + (point.formatted || point.location) + '</strong><br/><div style="margin: 8px 0; padding: 8px; background: #f8f9fa; border-radius: 4px;"><strong>Total Arrests at Location:</strong> ' + count + '<br/><strong>Total Jail Days:</strong> ' + totalJailDays + ' days<br/><strong>Avg Days/Arrest:</strong> ' + avgJailDays + ' days<br/><strong>Cost of Incarceration:</strong> $' + locationCost.toLocaleString() + ' (@$115/day)</div><hr style="margin: 8px 0; border: none; border-top: 1px solid #dee2e6;"/>';
+
+                group.forEach(function(arrest, idx) {
+                    const isMember = arrest.member === 'true';
+                    const daysInJail = arrest.daysin || 0;
+                    const arrestCost = daysInJail * 115;
+                    const memberBadge = isMember ? '<span class="source-member-badge">SOURCE MEMBER</span>' : '';
+                    const agency = arrest.arresting_agency || 'Unknown';
+                    
+                    popupContent += '<div class="arrest-item" style="background: ' + (isMember ? '#fff3cd' : '#f8f9fa') + '; border-left: 3px solid ' + getChargeColor(arrest.charge) + ';"><div style="display: flex; justify-content: space-between; margin-bottom: 4px; align-items: center; flex-wrap: wrap;"><strong>Arrest #' + (idx + 1) + '</strong><div>' + memberBadge + '<span class="jail-time-badge">' + daysInJail + ' ' + (daysInJail === 1 ? 'day' : 'days') + '</span></div></div><strong>Date:</strong> ' + arrest.date.split(' ')[0] + '<br/><strong>Charge:</strong> ' + arrest.charge + '<br/><strong>Agency:</strong> ' + agency + '<br/><strong>Time in Jail:</strong> ' + daysInJail + ' ' + (daysInJail === 1 ? 'day' : 'days') + '<br/><strong>Cost:</strong> $' + arrestCost.toLocaleString() + '<br/><a href="' + arrest.url + '" target="_blank" style="color: #007bff; text-decoration: none; font-weight: 500;">View Booking Details &rarr;</a></div>';
+                });
+
+                popupContent += '</div>';
+                marker.bindPopup(popupContent, { maxWidth: 400 });
+                markers.push(marker);
+            });
+        }
+
+        document.getElementById('charge-filter').addEventListener('change', function() {
+            if (isPlaying) stopAnimation();
+            updateMarkers();
+        });
+        
+        document.getElementById('month-filter').addEventListener('change', function() {
+            if (isPlaying) stopAnimation();
+            const selected = getSelectedValues(document.getElementById('month-filter'));
+            if (selected.length === 1) {
+                document.getElementById('current-month-display').textContent = selected[0];
+            } else if (selected.length === 0) {
+                document.getElementById('current-month-display').textContent = 'Select month or press Play';
+            } else {
+                document.getElementById('current-month-display').textContent = selected.length + ' months selected';
+            }
+            updateMarkers();
+        });
+        
+        document.getElementById('member-filter').addEventListener('change', function() {
+            if (isPlaying) stopAnimation();
+            updateMarkers();
+        });
+
+        document.getElementById('agency-filter').addEventListener('change', function() {
+            if (isPlaying) stopAnimation();
+            updateMarkers();
+        });
+
+        window.addEventListener('load', async function() {
+            const loaded = await loadData();
+            if (loaded) {
+                initMap();
+            }
+        });
+    </script>
+</body>
+</html>ss

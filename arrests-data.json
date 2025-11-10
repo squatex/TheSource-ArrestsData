@@ -248,7 +248,7 @@
     "lat": "27.64912",
     "lon": "-80.47025",
     "formatted": "6950 30th Square, Vero Beach, FL 32966, United States of America",
-    "daysin": 183,
+    "daysin": 184,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
   {
@@ -512,7 +512,7 @@
     "lat": "27.6329345",
     "lon": "-80.4542575",
     "formatted": "6155 College Lane, Vero Beach, FL 32966, United States of America",
-    "daysin": 75,
+    "daysin": 76,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
   {
@@ -572,7 +572,7 @@
     "lat": "27.625939",
     "lon": "-80.388897",
     "formatted": "iTHINK Financial, 1340 Us Highway 1, Vero Beach, FL 32960, United States of America",
-    "daysin": 62,
+    "daysin": 63,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
   {
@@ -620,7 +620,7 @@
     "lat": "27.83748075",
     "lon": "-80.48566382212907",
     "formatted": "McDonald's, 13395 US 1, Sebastian, FL 32958, United States of America",
-    "daysin": 53,
+    "daysin": 54,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
   {
@@ -680,7 +680,7 @@
     "lat": "27.6372",
     "lon": "-80.442782",
     "formatted": "5555 20th Street, Vero Beach, FL 32966, United States of America",
-    "daysin": 37,
+    "daysin": 38,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
   {
@@ -716,7 +716,7 @@
     "lat": "27.638549787770234",
     "lon": "-80.43901705174021",
     "formatted": "5175 20th Street, Vero Beach, FL 32966, United States of America",
-    "daysin": 30,
+    "daysin": 31,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
   {
@@ -752,7 +752,7 @@
     "lat": "27.638927928571427",
     "lon": "-80.44350779591836",
     "formatted": "5555 20th Street, Vero Beach, FL 32966, United States of America",
-    "daysin": 22,
+    "daysin": 23,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
   {
@@ -776,7 +776,7 @@
     "lat": "27.8381777",
     "lon": "-80.4866907",
     "formatted": "H&R Block, 13425 US 1, Sebastian, FL 32958, United States of America",
-    "daysin": 9,
+    "daysin": 10,
     "arresting_agency": "Sebastian Police Department"
   },
   {
@@ -788,7 +788,19 @@
     "lat": "27.584406",
     "lon": "-80.390674",
     "formatted": "1092 8th Court SW, Vero Beach, FL 32962, United States of America",
-    "daysin": 5,
+    "daysin": 6,
+    "arresting_agency": "Indian River County Sheriff's Office"
+  },
+  {
+    "location": "5555 20th Street Vero Beach, FL 32966",
+    "date": "11/09/2025",
+    "url": "https://www.ircsheriff.org/booking-details/1092836590",
+    "member": "false",
+    "charge": "Trespass Structure or Conveyance",
+    "lat": "27.638927928571427",
+    "lon": "-80.44350779591836",
+    "formatted": "5555 20th Street, Vero Beach, FL 32966, United States of America",
+    "daysin": 1,
     "arresting_agency": "Indian River County Sheriff's Office"
   }
 ]

@@ -17,9 +17,9 @@
     "url": "https://www.ircsheriff.org/booking-details/487516444",
     "member": "true",
     "charge": "Trespass",
-    "lat": "27.797792",
-    "lon": "-80.46184",
-    "formatted": "11221 Us Highway 1, Sebastian, FL 32958, United States of America",
+    "lat": "27.8114726958723",
+    "lon": "-80.46740956812953",
+    "formatted": "US 1, Sebastian, FL 32958, United States of America",
     "daysin": 86,
     "arresting_agency": "Sebastian Police Department"
   },
@@ -173,8 +173,8 @@
     "url": "https://www.ircsheriff.org/booking-details/626410509",
     "member": "false",
     "charge": "Non-Criminal - Returned For Court",
-    "lat": "27.6678929",
-    "lon": "-80.427243",
+    "lat": "27.6678878",
+    "lon": "-80.4268549",
     "formatted": "4055 41st Street, Gifford, FL 32960, United States of America",
     "daysin": 17,
     "arresting_agency": "Indian River County Sheriff's Office"
@@ -365,8 +365,8 @@
     "url": "https://www.ircsheriff.org/booking-details/1404637671",
     "member": "false",
     "charge": "TRESPASS",
-    "lat": "27.63912164089053",
-    "lon": "-80.48722059588133",
+    "lat": "27.63890005778926",
+    "lon": "-80.44999490074221",
     "formatted": "50000 20th Street, West Vero Corridor, FL 32966, United States of America",
     "daysin": 7,
     "arresting_agency": "Indian River County Sheriff's Office"
@@ -425,9 +425,9 @@
     "url": "https://www.ircsheriff.org/booking-details/2038906794",
     "member": "false",
     "charge": "Trespass",
-    "lat": "27.6387163",
-    "lon": "-80.3975399",
-    "formatted": "Vero Beach, FL, United States of America",
+    "lat": "27.6480082",
+    "lon": "-80.3999508",
+    "formatted": "US1 & 28th Street, US 1, Vero Beach, FL 34960, United States of America",
     "daysin": 65,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
@@ -572,7 +572,7 @@
     "lat": "27.625939",
     "lon": "-80.388897",
     "formatted": "iTHINK Financial, 1340 Us Highway 1, Vero Beach, FL 32960, United States of America",
-    "daysin": 132,
+    "daysin": 133,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
   {
@@ -620,7 +620,7 @@
     "lat": "27.83748075",
     "lon": "-80.48566382212907",
     "formatted": "McDonald's, 13395 US 1, Sebastian, FL 32958, United States of America",
-    "daysin": 123,
+    "daysin": 124,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
   {
@@ -680,7 +680,7 @@
     "lat": "27.6372",
     "lon": "-80.442782",
     "formatted": "5555 20th Street, Vero Beach, FL 32966, United States of America",
-    "daysin": 107,
+    "daysin": 108,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
   {
@@ -761,9 +761,9 @@
     "url": "https://www.ircsheriff.org/booking-details/1073166018",
     "member": "false",
     "charge": "COC Civil (NON-CRIMINAL)",
-    "lat": "27.65866",
-    "lon": "-80.36786",
-    "formatted": "3700 Indian River Drive East, Vero Beach, FL 32960, United States of America",
+    "lat": "27.6603646",
+    "lon": "-80.385968",
+    "formatted": "3700 Indian River Boulevard, Vero Beach, FL 32960, United States of America",
     "daysin": 0,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
@@ -812,7 +812,7 @@
     "lat": "27.638927928571427",
     "lon": "-80.44350779591836",
     "formatted": "5555 20th Street, Vero Beach, FL 32966, United States of America",
-    "daysin": 70,
+    "daysin": 71,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
   {
@@ -821,9 +821,9 @@
     "url": "https://www.ircsheriff.org/booking-details/239190635",
     "member": "false",
     "charge": "Trespass",
-    "lat": "27.647631",
-    "lon": "-80.475491",
-    "formatted": "7300 20th Street, Vero Beach, FL 32966, United States of America",
+    "lat": "27.63",
+    "lon": "-80.46",
+    "formatted": "6901 20th Street, Vero Beach, FL 32966, United States of America",
     "daysin": 7,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
@@ -848,7 +848,7 @@
     "lat": "27.6387979760776",
     "lon": "-80.38999471314946",
     "formatted": "835 20th Place, Vero Beach, FL 32960, United States of America",
-    "daysin": 62,
+    "daysin": 63,
     "arresting_agency": "Vero Beach Police Department"
   },
   {
@@ -860,7 +860,7 @@
     "lat": "27.6365971",
     "lon": "-80.4429120778538",
     "formatted": "Walmart Supercenter, 5555 20th Street, Vero Beach, FL 32966, United States of America",
-    "daysin": 62,
+    "daysin": 63,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
   {
@@ -893,9 +893,9 @@
     "url": "https://www.ircsheriff.org/booking-details/1777225489",
     "member": "false",
     "charge": "COC Civil (NON-CRIMINAL)",
-    "lat": "51.46351265",
-    "lon": "-2.6089674616",
-    "formatted": "The Not Found Kitchen, 91A Whiteladies Road, Bristol, BS8 2NT, United Kingdom",
+    "lat": "41.240438057901066",
+    "lon": "13.553751834902096",
+    "formatted": "Google ERROR 404 - MURAL NOT FOUND., Via dell'Agricoltura, 04024 Gaeta LT, Italy",
     "daysin": 4,
     "arresting_agency": "Vero Beach Police Department"
   },
@@ -908,7 +908,7 @@
     "lat": "27.66512695",
     "lon": "-80.42757244017187",
     "formatted": "Indian River County Sheriffs Office, 4055 41st Avenue, Vero Beach, FL 32960, United States of America",
-    "daysin": 41,
+    "daysin": 42,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
   {
@@ -929,10 +929,10 @@
     "url": "https://www.ircsheriff.org/booking-details/425137519",
     "member": "false",
     "charge": "TRESPASS",
-    "lat": "27.841543",
-    "lon": "-80.487939",
-    "formatted": "13633 Us Highway 1, Sebastian, FL 32958, United States of America",
-    "daysin": 37,
+    "lat": "27.8422861",
+    "lon": "-80.4874539",
+    "formatted": "US1 & Davis Street (Northbound), 13633 US 1, Sebastian, FL 32957, United States of America",
+    "daysin": 38,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
   {
@@ -956,7 +956,7 @@
     "lat": "27.638553618817962",
     "lon": "-80.40083711820391",
     "formatted": "1517 20th Street, Vero Beach, FL 32960, United States of America",
-    "daysin": 33,
+    "daysin": 34,
     "arresting_agency": "Vero Beach Police Department"
   },
   {
@@ -1004,7 +1004,7 @@
     "lat": "27.79",
     "lon": "-80.41",
     "formatted": "11300 Highway A1a, Vero Beach, FL 32963, United States of America",
-    "daysin": 17,
+    "daysin": 18,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
   {
@@ -1016,7 +1016,7 @@
     "lat": "27.6313608699962",
     "lon": "-80.39692334297379",
     "formatted": "1595 Old Dixie Highway, Vero Beach, FL 32960, United States of America",
-    "daysin": 7,
+    "daysin": 8,
     "arresting_agency": "Vero Beach Police Department"
   },
   {
@@ -1028,7 +1028,7 @@
     "lat": "27.63862365",
     "lon": "-80.51269130791155",
     "formatted": "Dunkin' Donuts, 9009 20th Street, Vero Beach, FL 32966, United States of America",
-    "daysin": 5,
+    "daysin": 6,
     "arresting_agency": "Indian River County Sheriff's Office"
   }
 ]

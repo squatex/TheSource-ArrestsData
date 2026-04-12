@@ -824,7 +824,7 @@
     "lat": "27.638927928571427",
     "lon": "-80.44350779591836",
     "formatted": "5555 20th Street, Vero Beach, FL 32966, United States of America",
-    "daysin": 153,
+    "daysin": 154,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
   {
@@ -860,7 +860,7 @@
     "lat": "27.6387979760776",
     "lon": "-80.38999471314946",
     "formatted": "835 20th Place, Vero Beach, FL 32960, United States of America",
-    "daysin": 145,
+    "daysin": 146,
     "arresting_agency": "Vero Beach Police Department"
   },
   {
@@ -1220,7 +1220,7 @@
     "lat": "27.620192",
     "lon": "-80.422524",
     "formatted": "1000 36th Avenue, Vero Beach, FL 32960, United States of America",
-    "daysin": 23,
+    "daysin": 24,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
   {
@@ -1232,7 +1232,7 @@
     "lat": "27.615674",
     "lon": "-80.440163",
     "formatted": "500 51st Court, Vero Beach, FL 32968, United States of America",
-    "daysin": 22,
+    "daysin": 23,
     "arresting_agency": "Vero Beach Police Department"
   },
   {
@@ -1244,7 +1244,7 @@
     "lat": "27.632136",
     "lon": "-80.388708",
     "formatted": "1690 Us Highway 1, Vero Beach, FL 32960, United States of America",
-    "daysin": 16,
+    "daysin": 17,
     "arresting_agency": "Vero Beach Police Department"
   },
   {
@@ -1256,7 +1256,7 @@
     "lat": "27.638927928571427",
     "lon": "-80.44350779591836",
     "formatted": "5555 20th Street, Vero Beach, FL 32966, United States of America",
-    "daysin": 16,
+    "daysin": 17,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
   {
@@ -1268,7 +1268,7 @@
     "lat": "27.675082",
     "lon": "-80.415646",
     "formatted": "2900 45th Street, Gifford, FL 32967, United States of America",
-    "daysin": 9,
+    "daysin": 10,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
   {
@@ -1304,7 +1304,7 @@
     "lat": "27.7670365",
     "lon": "-80.60494025",
     "formatted": "14 South Magnolia Street, Fellsmere, FL 32948, United States of America",
-    "daysin": 4,
+    "daysin": 5,
     "arresting_agency": "Fellsmere Police Department"
   }
 ]

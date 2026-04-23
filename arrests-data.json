@@ -824,7 +824,7 @@
     "lat": "27.638927928571427",
     "lon": "-80.44350779591836",
     "formatted": "5555 20th Street, Vero Beach, FL 32966, United States of America",
-    "daysin": 164,
+    "daysin": 165,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
   {
@@ -860,7 +860,7 @@
     "lat": "27.6387979760776",
     "lon": "-80.38999471314946",
     "formatted": "835 20th Place, Vero Beach, FL 32960, United States of America",
-    "daysin": 156,
+    "daysin": 157,
     "arresting_agency": "Vero Beach Police Department"
   },
   {
@@ -1256,7 +1256,7 @@
     "lat": "27.638927928571427",
     "lon": "-80.44350779591836",
     "formatted": "5555 20th Street, Vero Beach, FL 32966, United States of America",
-    "daysin": 27,
+    "daysin": 28,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
   {
@@ -1265,10 +1265,10 @@
     "url": "https://www.ircsheriff.org/booking-details/1076449283",
     "member": "false",
     "charge": "MISD FTA",
-    "lat": "27.642936",
-    "lon": "-80.413043",
-    "formatted": "Vero Beach, FL, United States of America",
-    "daysin": 20,
+    "lat": "27.675082",
+    "lon": "-80.415646",
+    "formatted": "2900 45th Street, Gifford, FL 32967, United States of America",
+    "daysin": 21,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
   {
@@ -1316,7 +1316,7 @@
     "lat": "27.661613",
     "lon": "-80.4013857",
     "formatted": "Church of God by Faith, 1705 38th Street, Vero Beach, FL 32960, United States of America",
-    "daysin": 3,
+    "daysin": 4,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
   {
@@ -1328,7 +1328,19 @@
     "lat": "27.674766481651236",
     "lon": "-80.40744872174014",
     "formatted": "4495 US 1, Gifford, FL 32967, United States of America",
-    "daysin": 3,
+    "daysin": 4,
+    "arresting_agency": "Indian River County Sheriff's Office"
+  },
+  {
+    "location": "1590 9th Street Vero Beach FL 32962",
+    "date": "04/23/2026",
+    "url": "https://www.ircsheriff.org/booking-details/1144891045",
+    "member": "false",
+    "charge": "COC Civil (NON-CRIMINAL)",
+    "lat": "27.588409",
+    "lon": "-80.402878",
+    "formatted": "1590 9th Street SW, Vero Beach, FL 32962, United States of America",
+    "daysin": 0,
     "arresting_agency": "Indian River County Sheriff's Office"
   }
 ]

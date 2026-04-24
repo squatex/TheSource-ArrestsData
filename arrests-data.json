@@ -824,7 +824,7 @@
     "lat": "27.638927928571427",
     "lon": "-80.44350779591836",
     "formatted": "5555 20th Street, Vero Beach, FL 32966, United States of America",
-    "daysin": 165,
+    "daysin": 166,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
   {
@@ -860,7 +860,7 @@
     "lat": "27.6387979760776",
     "lon": "-80.38999471314946",
     "formatted": "835 20th Place, Vero Beach, FL 32960, United States of America",
-    "daysin": 157,
+    "daysin": 158,
     "arresting_agency": "Vero Beach Police Department"
   },
   {
@@ -1073,9 +1073,9 @@
     "url": "https://www.ircsheriff.org/booking-details/720148068",
     "member": "false",
     "charge": "MISD FTA",
-    "lat": "27.673023",
-    "lon": "-80.410917",
-    "formatted": "4400 25th Avenue, Gifford, FL 32967, United States of America",
+    "lat": "27.67293",
+    "lon": "-80.41099",
+    "formatted": "4400 25th Avenue, Vero Beach, FL 32967, United States of America",
     "daysin": 34,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
@@ -1229,9 +1229,9 @@
     "url": "https://www.ircsheriff.org/booking-details/331976672",
     "member": "false",
     "charge": "TRESPASS",
-    "lat": "27.615674",
-    "lon": "-80.440163",
-    "formatted": "500 51st Court, Vero Beach, FL 32968, United States of America",
+    "lat": "27.642936",
+    "lon": "-80.413043",
+    "formatted": "Vero Beach, FL, United States of America",
     "daysin": 24,
     "arresting_agency": "Vero Beach Police Department"
   },
@@ -1256,7 +1256,7 @@
     "lat": "27.638927928571427",
     "lon": "-80.44350779591836",
     "formatted": "5555 20th Street, Vero Beach, FL 32966, United States of America",
-    "daysin": 28,
+    "daysin": 29,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
   {
@@ -1268,7 +1268,7 @@
     "lat": "27.675082",
     "lon": "-80.415646",
     "formatted": "2900 45th Street, Gifford, FL 32967, United States of America",
-    "daysin": 21,
+    "daysin": 22,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
   {
@@ -1316,7 +1316,7 @@
     "lat": "27.661613",
     "lon": "-80.4013857",
     "formatted": "Church of God by Faith, 1705 38th Street, Vero Beach, FL 32960, United States of America",
-    "daysin": 4,
+    "daysin": 5,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
   {
@@ -1328,7 +1328,7 @@
     "lat": "27.674766481651236",
     "lon": "-80.40744872174014",
     "formatted": "4495 US 1, Gifford, FL 32967, United States of America",
-    "daysin": 4,
+    "daysin": 5,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
   {
@@ -1340,7 +1340,7 @@
     "lat": "27.588409",
     "lon": "-80.402878",
     "formatted": "1590 9th Street SW, Vero Beach, FL 32962, United States of America",
-    "daysin": 0,
+    "daysin": 1,
     "arresting_agency": "Indian River County Sheriff's Office"
   }
 ]

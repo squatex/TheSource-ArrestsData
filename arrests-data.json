@@ -1448,7 +1448,7 @@
     "lat": "27.665127",
     "lon": "-80.4275724",
     "formatted": "Indian River County Sheriffs Office, 4055 41st Avenue, Vero Beach, FL 32960, United States of America",
-    "daysin": 26,
+    "daysin": 21,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
   {
@@ -1532,7 +1532,7 @@
     "lat": "27.6385316",
     "lon": "-80.3823182",
     "formatted": "TJ Maxx, 405 21st Street, Vero Beach, FL 32960, United States of America",
-    "daysin": 9,
+    "daysin": 8,
     "arresting_agency": "Vero Beach Police Department"
   }
 ]

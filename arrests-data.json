@@ -860,7 +860,7 @@
     "lat": "27.638927928571427",
     "lon": "-80.44350779591836",
     "formatted": "5555 20th Street, Vero Beach, FL 32966, United States of America",
-    "daysin": 207,
+    "daysin": 208,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
   {
@@ -896,7 +896,7 @@
     "lat": "27.6387979760776",
     "lon": "-80.38999471314946",
     "formatted": "835 20th Place, Vero Beach, FL 32960, United States of America",
-    "daysin": 199,
+    "daysin": 200,
     "arresting_agency": "Vero Beach Police Department"
   },
   {
@@ -1037,9 +1037,9 @@
     "url": "https://www.ircsheriff.org/booking-details/1994557988",
     "member": "false",
     "charge": "Trespass",
-    "lat": "",
-    "lon": "",
-    "formatted": null,
+    "lat": "27.660326620689656",
+    "lon": "-80.39745010344828",
+    "formatted": "1255 37th Street, Gifford, FL 32960, United States of America",
     "daysin": 1,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
@@ -1316,7 +1316,7 @@
     "lat": "27.638927928571427",
     "lon": "-80.44350779591836",
     "formatted": "5555 20th Street, Vero Beach, FL 32966, United States of America",
-    "daysin": 70,
+    "daysin": 71,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
   {
@@ -1328,7 +1328,7 @@
     "lat": "27.675082",
     "lon": "-80.415646",
     "formatted": "2900 45th Street, Gifford, FL 32967, United States of America",
-    "daysin": 63,
+    "daysin": 64,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
   {
@@ -1388,7 +1388,7 @@
     "lat": "27.674766481651236",
     "lon": "-80.40744872174014",
     "formatted": "4495 US 1, Gifford, FL 32967, United States of America",
-    "daysin": 46,
+    "daysin": 47,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
   {
@@ -1436,7 +1436,7 @@
     "lat": "27.674914836734693",
     "lon": "-80.41491312244898",
     "formatted": "2880 45th Street, Gifford, FL 32967, United States of America",
-    "daysin": 35,
+    "daysin": 36,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
   {
@@ -1460,7 +1460,7 @@
     "lat": "27.674766481651236",
     "lon": "-80.40744872174014",
     "formatted": "4495 US 1, Gifford, FL 32967, United States of America",
-    "daysin": 32,
+    "daysin": 33,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
   {
@@ -1472,7 +1472,7 @@
     "lat": "27.829155",
     "lon": "-80.480861",
     "formatted": "2001 Us Highway 1, Sebastian, FL 32958, United States of America",
-    "daysin": 28,
+    "daysin": 29,
     "arresting_agency": "Sebastian Police Department"
   },
   {
@@ -1520,7 +1520,7 @@
     "lat": "27.622712",
     "lon": "-80.388992",
     "formatted": "1150 Us Highway 1, Vero Beach, FL 32960, United States of America",
-    "daysin": 19,
+    "daysin": 20,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
   {

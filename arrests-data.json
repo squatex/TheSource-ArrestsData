@@ -860,7 +860,7 @@
     "lat": "27.6365971",
     "lon": "-80.4429121",
     "formatted": "Walmart Supercenter, 5555 20th Street, Vero Beach, FL 32966, United States of America",
-    "daysin": 215,
+    "daysin": 216,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
   {
@@ -896,7 +896,7 @@
     "lat": "27.6387979760776",
     "lon": "-80.38999471314946",
     "formatted": "835 20th Place, Vero Beach, FL 32960, United States of America",
-    "daysin": 207,
+    "daysin": 208,
     "arresting_agency": "Vero Beach Police Department"
   },
   {
@@ -1037,9 +1037,9 @@
     "url": "https://www.ircsheriff.org/booking-details/1994557988",
     "member": "false",
     "charge": "Trespass",
-    "lat": "27.6365371",
-    "lon": "-80.4235013",
-    "formatted": "1255 37th Avenue, Vero Beach, FL 32960, United States of America",
+    "lat": "27.660326620689656",
+    "lon": "-80.39745010344828",
+    "formatted": "1255 37th Street, Gifford, FL 32960, United States of America",
     "daysin": 1,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
@@ -1316,7 +1316,7 @@
     "lat": "27.6365971",
     "lon": "-80.4429121",
     "formatted": "Walmart Supercenter, 5555 20th Street, Vero Beach, FL 32966, United States of America",
-    "daysin": 78,
+    "daysin": 79,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
   {
@@ -1388,7 +1388,7 @@
     "lat": "27.674766481651236",
     "lon": "-80.40744872174014",
     "formatted": "4495 US 1, Gifford, FL 32967, United States of America",
-    "daysin": 54,
+    "daysin": 55,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
   {
@@ -1436,7 +1436,7 @@
     "lat": "27.674914836734693",
     "lon": "-80.41491312244898",
     "formatted": "2880 45th Street, Gifford, FL 32967, United States of America",
-    "daysin": 43,
+    "daysin": 44,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
   {
@@ -1460,7 +1460,7 @@
     "lat": "27.674766481651236",
     "lon": "-80.40744872174014",
     "formatted": "4495 US 1, Gifford, FL 32967, United States of America",
-    "daysin": 40,
+    "daysin": 41,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
   {
@@ -1520,7 +1520,7 @@
     "lat": "27.6396766",
     "lon": "-80.3902775",
     "formatted": "1150 US Highway 1, Vero Beach, FL 32960, United States of America",
-    "daysin": 27,
+    "daysin": 28,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
   {
@@ -1533,6 +1533,18 @@
     "lon": "-80.3823182",
     "formatted": "TJ Maxx, 405 21st Street, Vero Beach, FL 32960, United States of America",
     "daysin": 8,
+    "arresting_agency": "Vero Beach Police Department"
+  },
+  {
+    "location": "1901 US1 Highway Vero Beach FL 32960",
+    "date": "06/12/2026",
+    "url": "https://www.ircsheriff.org/booking-details/1839932897",
+    "member": "false",
+    "charge": "TRESPASS",
+    "lat": "27.6387163",
+    "lon": "-80.3975399",
+    "formatted": "Vero Beach, FL 32960, United States of America",
+    "daysin": 1,
     "arresting_agency": "Vero Beach Police Department"
   }
 ]

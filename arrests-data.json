@@ -353,9 +353,9 @@
     "url": "https://www.ircsheriff.org/booking-details/167535131",
     "member": "true",
     "charge": "MISD FTA",
-    "lat": "27.6392865",
-    "lon": "-80.495758",
-    "formatted": "8200 20th Street, Vero Beach, FL 32966, United States of America",
+    "lat": "27.6388565",
+    "lon": "-80.444463",
+    "formatted": "20th Street, Vero Beach, FL 32966, United States of America",
     "daysin": 20,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
@@ -413,9 +413,9 @@
     "url": "https://www.ircsheriff.org/booking-details/148042618",
     "member": "false",
     "charge": "COC Civil (NON-CRIMINAL)",
-    "lat": "27.611018",
-    "lon": "-80.4044439",
-    "formatted": "1150 5th Street, Poinciana Park, FL 32962, United States of America",
+    "lat": "27.6112113",
+    "lon": "-80.4126168",
+    "formatted": "1150 5th Street, Vero Beach South, FL 32962, United States of America",
     "daysin": 2,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
@@ -449,9 +449,9 @@
     "url": "https://www.ircsheriff.org/booking-details/2038906794",
     "member": "false",
     "charge": "Trespass",
-    "lat": "27.6387163",
-    "lon": "-80.3975399",
-    "formatted": "Vero Beach, FL 32960, United States of America",
+    "lat": "27.6329052",
+    "lon": "-80.3893127",
+    "formatted": "US1 & 17th Street (Inbound), 8th Avenue, Vero Beach, FL 32690, United States of America",
     "daysin": 65,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
@@ -691,7 +691,7 @@
     "charge": "Trespass",
     "lat": "27.6387163",
     "lon": "-80.3975399",
-    "formatted": "Vero Beach, FL 32960, United States of America",
+    "formatted": "Vero Beach, FL, United States of America",
     "daysin": 7,
     "arresting_agency": "Vero Beach Police Department"
   },
@@ -713,9 +713,9 @@
     "url": "https://www.ircsheriff.org/booking-details/1651084115",
     "member": "false",
     "charge": "Trespass",
-    "lat": "27.63676",
-    "lon": "-80.443218",
-    "formatted": "5555 20th Street, Vero Beach, FL 32966, United States of America",
+    "lat": "27.6367595",
+    "lon": "-80.4432176",
+    "formatted": "5555 20th Street, Vero Beach, FL 32960, United States of America",
     "daysin": 130,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
@@ -725,9 +725,9 @@
     "url": "https://www.ircsheriff.org/booking-details/92561078",
     "member": "false",
     "charge": "COC Civil (NON-CRIMINAL)",
-    "lat": "27.6393",
-    "lon": "-80.388711",
-    "formatted": "2050 US Highway 1, Vero Beach, FL 32960, United States of America",
+    "lat": "27.6396477",
+    "lon": "-80.3893266",
+    "formatted": "14 US Highway 1, Vero Beach, FL 32690, United States of America",
     "daysin": 3,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
@@ -845,9 +845,9 @@
     "url": "https://www.ircsheriff.org/booking-details/255377464",
     "member": "false",
     "charge": "Trespass",
-    "lat": "27.63676",
-    "lon": "-80.443218",
-    "formatted": "5555 20th Street, Vero Beach, FL 32966, United States of America",
+    "lat": "27.6367595",
+    "lon": "-80.4432176",
+    "formatted": "5555 20th Street, Vero Beach, FL 32960, United States of America",
     "daysin": 7,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
@@ -860,7 +860,7 @@
     "lat": "27.6365971",
     "lon": "-80.4429121",
     "formatted": "Walmart Supercenter, 5555 20th Street, Vero Beach, FL 32966, United States of America",
-    "daysin": 250,
+    "daysin": 251,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
   {
@@ -896,7 +896,7 @@
     "lat": "27.6387979760776",
     "lon": "-80.38999471314946",
     "formatted": "835 20th Place, Vero Beach, FL 32960, United States of America",
-    "daysin": 242,
+    "daysin": 243,
     "arresting_agency": "Vero Beach Police Department"
   },
   {
@@ -1061,9 +1061,9 @@
     "url": "https://www.ircsheriff.org/booking-details/1833420177",
     "member": "false",
     "charge": "OR PROWLING",
-    "lat": "27.6391506",
-    "lon": "-80.3592396",
-    "formatted": "11300 SR A1A, Vero Beach, FL 32690, United States of America",
+    "lat": "27.6698593",
+    "lon": "-80.3614317",
+    "formatted": "11300 SR A1A, Vero Beach, FL 32963, United States of America",
     "daysin": 22,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
@@ -1241,9 +1241,9 @@
     "url": "https://www.ircsheriff.org/booking-details/550588266",
     "member": "false",
     "charge": "Trespass",
-    "lat": "27.6387163",
-    "lon": "-80.3975399",
-    "formatted": "Vero Beach, FL 32960, United States of America",
+    "lat": "27.6329052",
+    "lon": "-80.3893127",
+    "formatted": "US1 & 17th Street (Inbound), 8th Avenue, Vero Beach, FL 32690, United States of America",
     "daysin": 5,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
@@ -1316,7 +1316,7 @@
     "lat": "27.6365971",
     "lon": "-80.4429121",
     "formatted": "Walmart Supercenter, 5555 20th Street, Vero Beach, FL 32966, United States of America",
-    "daysin": 113,
+    "daysin": 114,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
   {
@@ -1397,9 +1397,9 @@
     "url": "https://www.ircsheriff.org/booking-details/1144891045",
     "member": "false",
     "charge": "COC Civil (NON-CRIMINAL)",
-    "lat": "27.587139",
-    "lon": "-80.4021721",
-    "formatted": "1590 9th Street Southwest, Florida Ridge, FL 32962, United States of America",
+    "lat": "27.61955047368421",
+    "lon": "-80.40096505263158",
+    "formatted": "1590 9th Place, Royal Poinciana Park, FL 32960, United States of America",
     "daysin": 0,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
@@ -1460,7 +1460,7 @@
     "lat": "27.674766481651236",
     "lon": "-80.40744872174014",
     "formatted": "4495 US 1, Gifford, FL 32967, United States of America",
-    "daysin": 75,
+    "daysin": 76,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
   {
@@ -1520,7 +1520,7 @@
     "lat": "27.6396766",
     "lon": "-80.3902775",
     "formatted": "1150 US Highway 1, Vero Beach, FL 32960, United States of America",
-    "daysin": 62,
+    "daysin": 63,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
   {
@@ -1543,8 +1543,8 @@
     "charge": "TRESPASS",
     "lat": "27.6387163",
     "lon": "-80.3975399",
-    "formatted": "Vero Beach, FL 32960, United States of America",
-    "daysin": 35,
+    "formatted": "Vero Beach, FL, United States of America",
+    "daysin": 36,
     "arresting_agency": "Vero Beach Police Department"
   },
   {
@@ -1568,7 +1568,7 @@
     "lat": "27.639935",
     "lon": "-80.380619",
     "formatted": "2001 Indian River Boulevard, Vero Beach, FL 32960, United States of America",
-    "daysin": 19,
+    "daysin": 20,
     "arresting_agency": "Vero Beach Police Department"
   },
   {
@@ -1592,7 +1592,7 @@
     "lat": "27.63179670696881",
     "lon": "-80.39569093929612",
     "formatted": "1225 16th Street, Vero Beach, FL 32960, United States of America",
-    "daysin": 11,
+    "daysin": 12,
     "arresting_agency": "Vero Beach Police Department"
   },
   {
@@ -1604,7 +1604,7 @@
     "lat": "27.75490129659336",
     "lon": "-80.43762900194181",
     "formatted": "8855 50th Avenue, Wabasso, FL 32958, United States of America",
-    "daysin": 10,
+    "daysin": 11,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
   {
@@ -1628,7 +1628,19 @@
     "lat": "27.644908",
     "lon": "-80.4012798",
     "formatted": "2536 16th Avenue, Vero Beach, FL 32960, United States of America",
-    "daysin": 4,
+    "daysin": 5,
     "arresting_agency": "Vero Beach Police Department"
+  },
+  {
+    "location": "5890 20TH STREET VERO BEACH FL 32966",
+    "date": "07/17/2026",
+    "url": "https://www.ircsheriff.org/booking-details/1707335485",
+    "member": "false",
+    "charge": "TRESPASS",
+    "lat": "27.6408411",
+    "lon": "-80.4490301",
+    "formatted": "Dollar Tree, 5890 20th Street, Vero Beach, FL 32966, United States of America",
+    "daysin": 1,
+    "arresting_agency": "Indian River County Sheriff's Office"
   }
 ]

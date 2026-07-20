@@ -209,9 +209,9 @@
     "url": "https://www.ircsheriff.org/booking-details/1266948034",
     "member": "false",
     "charge": "Trespass",
-    "lat": "27.608738",
-    "lon": "-80.385313",
-    "formatted": "555 4th Street, Nevins, FL 32962, United States of America",
+    "lat": "27.608823",
+    "lon": "-80.385",
+    "formatted": "555 4th Street, Vero Beach South, FL 32962, United States of America",
     "daysin": 1,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
@@ -860,7 +860,7 @@
     "lat": "27.6365971",
     "lon": "-80.4429121",
     "formatted": "Walmart Supercenter, 5555 20th Street, Vero Beach, FL 32966, United States of America",
-    "daysin": 252,
+    "daysin": 253,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
   {
@@ -896,7 +896,7 @@
     "lat": "27.6387979760776",
     "lon": "-80.38999471314946",
     "formatted": "835 20th Place, Vero Beach, FL 32960, United States of America",
-    "daysin": 244,
+    "daysin": 245,
     "arresting_agency": "Vero Beach Police Department"
   },
   {
@@ -1316,7 +1316,7 @@
     "lat": "27.6365971",
     "lon": "-80.4429121",
     "formatted": "Walmart Supercenter, 5555 20th Street, Vero Beach, FL 32966, United States of America",
-    "daysin": 115,
+    "daysin": 116,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
   {
@@ -1460,7 +1460,7 @@
     "lat": "27.674766481651236",
     "lon": "-80.40744872174014",
     "formatted": "4495 US 1, Gifford, FL 32967, United States of America",
-    "daysin": 77,
+    "daysin": 78,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
   {
@@ -1520,7 +1520,7 @@
     "lat": "27.6396766",
     "lon": "-80.3902775",
     "formatted": "1150 US Highway 1, Vero Beach, FL 32960, United States of America",
-    "daysin": 64,
+    "daysin": 65,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
   {
@@ -1544,7 +1544,7 @@
     "lat": "27.6387163",
     "lon": "-80.3975399",
     "formatted": "Vero Beach, FL, United States of America",
-    "daysin": 37,
+    "daysin": 38,
     "arresting_agency": "Vero Beach Police Department"
   },
   {
@@ -1568,7 +1568,7 @@
     "lat": "27.639935",
     "lon": "-80.380619",
     "formatted": "2001 Indian River Boulevard, Vero Beach, FL 32960, United States of America",
-    "daysin": 21,
+    "daysin": 22,
     "arresting_agency": "Vero Beach Police Department"
   },
   {
@@ -1592,7 +1592,7 @@
     "lat": "27.63179670696881",
     "lon": "-80.39569093929612",
     "formatted": "1225 16th Street, Vero Beach, FL 32960, United States of America",
-    "daysin": 13,
+    "daysin": 14,
     "arresting_agency": "Vero Beach Police Department"
   },
   {
@@ -1604,7 +1604,7 @@
     "lat": "27.75490129659336",
     "lon": "-80.43762900194181",
     "formatted": "8855 50th Avenue, Wabasso, FL 32958, United States of America",
-    "daysin": 12,
+    "daysin": 13,
     "arresting_agency": "Indian River County Sheriff's Office"
   },
   {
@@ -1628,7 +1628,7 @@
     "lat": "27.644908",
     "lon": "-80.4012798",
     "formatted": "2536 16th Avenue, Vero Beach, FL 32960, United States of America",
-    "daysin": 6,
+    "daysin": 7,
     "arresting_agency": "Vero Beach Police Department"
   },
   {
@@ -1640,7 +1640,31 @@
     "lat": "27.6408411",
     "lon": "-80.4490301",
     "formatted": "Dollar Tree, 5890 20th Street, Vero Beach, FL 32966, United States of America",
-    "daysin": 2,
+    "daysin": 3,
     "arresting_agency": "Indian River County Sheriff's Office"
+  },
+  {
+    "location": "2500 45TH St Vero Beach Fl 32967",
+    "date": "07/19/2026",
+    "url": "https://www.ircsheriff.org/booking-details/571033301",
+    "member": "false",
+    "charge": "MISD FTA",
+    "lat": "27.6749688",
+    "lon": "-80.4110595",
+    "formatted": "2500 45th Street, Vero Beach, FL 32967, United States of America",
+    "daysin": 1,
+    "arresting_agency": "Indian River County Sheriff's Office"
+  },
+  {
+    "location": "Not Found",
+    "date": "07/20/2026",
+    "url": "https://www.ircsheriff.org/booking-details/906113393",
+    "member": "false",
+    "charge": "Not Found",
+    "lat": "45.9119393",
+    "lon": "8.6770152",
+    "formatted": "Existing, not found from top;start from bottom, 21033 Cittiglio VA, Italy",
+    "daysin": 0,
+    "arresting_agency": "Not Found"
   }
 ]
